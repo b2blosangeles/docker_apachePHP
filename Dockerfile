@@ -43,4 +43,5 @@ ADD phpinfo.php /var/www/html/
 ADD supervisord.conf /etc/
 EXPOSE 22 80 443
 
-CMD ["/usr/sbin/apache2", "-DFOREGROUND"] 
+# CMD ["/usr/sbin/apache2", "-DFOREGROUND"] 
+CMD "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
