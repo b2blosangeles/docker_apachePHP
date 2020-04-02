@@ -12,7 +12,7 @@ RUN apt-get install -y apache2 vim bash-completion unzip
 RUN mkdir -p /var/lock/apache2 /var/run/apache2
 
 # install mysql
-RUN apt-get install -y mysql-client mysql-server
+# --- RUN apt-get install -y mysql-client mysql-server
 #RUN echo "NETWORKING=yes" > /etc/sysconfig/network
 # start mysqld to create initial tables
 #RUN service mysqld start
@@ -23,8 +23,8 @@ RUN apt-get install -y php5 php5-mysql php5-dev php5-gd php5-memcache php5-pspel
 
 # install supervisord
 
-# --- RUN apt-get install -y supervisor
-# --- RUN mkdir -p /var/log/supervisor
+RUN apt-get install -y supervisor
+RUN mkdir -p /var/log/supervisor
 
 # install sshd
 # --- RUN apt-get install -y openssh-server openssh-client passwd
