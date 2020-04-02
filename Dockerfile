@@ -39,7 +39,7 @@ RUN mkdir -p /var/log/supervisor
 #ADD id_rsa.pub /root/.ssh/authorized_keys
 
 
-# --- ADD phpinfo.php /var/www/html/
+ADD phpinfo.php /var/www/html/
 # --- ADD supervisord.conf /etc/
 # --- EXPOSE 22 80 443
 EXPOSE 80
