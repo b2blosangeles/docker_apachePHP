@@ -5,7 +5,7 @@ MAINTAINER Nicholas Istre <nicholas.istre@e-hps.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 # Update sources
-RUN apt-get update -y && apt autoremove
+RUN apt-get update -y
 
 # install http
 RUN apt-get install -y apache2 vim bash-completion unzip
