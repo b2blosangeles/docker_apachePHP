@@ -4,8 +4,9 @@ $servername = "142.93.73.66";
 $username = "root";
 $password = $_GET["password"];
 $dbname = "mysql";
-echo "test1"
+echo "test1";
 // Create connection
+/*
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -24,5 +25,6 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 $conn->close();
+*/
 ?>
 
