@@ -1,4 +1,4 @@
-FROM ubuntu:19.10
+FROM ubuntu:14.04
 MAINTAINER Nicholas Istre <nicholas.istre@e-hps.com>
 
 # Setup environment
