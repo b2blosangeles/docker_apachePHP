@@ -4,7 +4,7 @@ $servername = "142.93.73.66";
 $username = "root";
 $password = $_GET["password"];
 $dbname = "mysql";
-
+echo "test1"
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
