@@ -14,7 +14,7 @@ RUN mkdir -p /var/lock/apache2 /var/run/apache2
 
 # install php
 RUN apt-get install -y php5 php5-mysql php5-dev php5-gd php5-memcache php5-pspell php5-snmp snmp php5-xmlrpc libapache2-mod-php5 php5-cli
-#RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
+RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml
 
 EXPOSE 80
 # CMD ["/usr/sbin/apache2", "-DFOREGROUND"] 
