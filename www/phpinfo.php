@@ -5,7 +5,7 @@ $username = "root";
 $password = $_GET["password"];
 $dbname = "mysql";
 
-echo "test"
+echo "test";
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 /*
