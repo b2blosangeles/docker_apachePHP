@@ -1,10 +1,8 @@
 FROM ubuntu:19.10
-# --- FROM ubuntu:14.04
 MAINTAINER JXU <.com>
 
 # Setup environment
 ENV DEBIAN_FRONTEND noninteractive
-
 # Update sources
 RUN apt-get update -y
 
