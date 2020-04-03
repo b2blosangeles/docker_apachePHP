@@ -1,5 +1,5 @@
 FROM ubuntu:19.10
-MAINTAINER JXU <nicholas.istre@e-hps.com>
+MAINTAINER Nicholas Istre <nicholas.istre@e-hps.com>
 
 # Setup environment
 ENV DEBIAN_FRONTEND noninteractive
@@ -12,7 +12,7 @@ RUN apt-get install -y apache2 vim bash-completion unzip
 RUN mkdir -p /var/lock/apache2 /var/run/apache2
 
 # install mysql
-# --- RUN apt-get install -y mysql-client mysql-server
+RUN apt-get install -y mysql-client mysql-server
 #RUN echo "NETWORKING=yes" > /etc/sysconfig/network
 # start mysqld to create initial tables
 #RUN service mysqld start
@@ -27,21 +27,20 @@ RUN apt-get install -y supervisor
 RUN mkdir -p /var/log/supervisor
 
 # install sshd
-# --- RUN apt-get install -y openssh-server openssh-client passwd
-# --- RUN mkdir -p /var/run/sshd
+RUN apt-get install -y openssh-server openssh-client passwd
+RUN mkdir -p /var/run/sshd
 
 #RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_dsa_key && ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key 
-# --- RUN sed -ri 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
-# --- RUN echo 'root:changeme' | chpasswd
+RUN sed -ri 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
+RUN echo 'root:changeme' | chpasswd
 
 # Put your own public key at id_rsa.pub for key-based login.
-# --- RUN mkdir -p /root/.ssh && touch /root/.ssh/authorized_keys && chmod 700 /root/.ssh
+RUN mkdir -p /root/.ssh && touch /root/.ssh/authorized_keys && chmod 700 /root/.ssh
 #ADD id_rsa.pub /root/.ssh/authorized_keys
 
 
 ADD phpinfo.php /var/www/html/
-# --- ADD supervisord.conf /etc/
-# --- EXPOSE 22 80 443
+ADD supervisord.conf /etc/
 EXPOSE 80
 # CMD ["/usr/sbin/apache2", "-DFOREGROUND"] 
 CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
