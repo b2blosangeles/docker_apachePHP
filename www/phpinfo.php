@@ -1,6 +1,6 @@
 
 <?php
-$servername = "142.93.73.66";
+$servername = "127.0.0.1";
 $username = "root";
 $password = $_GET["password"];
 $dbname = "mysql";
