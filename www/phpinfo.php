@@ -1,9 +1,9 @@
 
 <?php
-$servername = "192.168.0.21";
+$servername = " 142.93.73.66 ";
 // servername = "127.0.0.1";
 $username = "root";
-$password = 'Trinet2020%23';
+$password = 'Trinet2020#';
 $dbname = "test";
 // $_GET["password"]
 echo $_GET["password"];
