@@ -1,6 +1,6 @@
 
 <?php
-$servername = "192.168.0.21:3306";
+$servername = "192.168.0.21";
 // servername = "127.0.0.1";
 $username = "root@192.168.0.21";
 $password = $_GET["password"];
