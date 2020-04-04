@@ -41,8 +41,6 @@ RUN mkdir -p /root/.ssh && touch /root/.ssh/authorized_keys && chmod 700 /root/.
 
 ADD phpinfo.php /var/www/html/
 ADD supervisord.conf /etc/
+EXPOSE 22 80 443
 
-EXPOSE 80
-# CMD ["/usr/sbin/apache2", "-DFOREGROUND"] 
 CMD /bin/bash -c "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
-# ENTRYPOINT "source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND"
