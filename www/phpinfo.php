@@ -3,7 +3,7 @@
 $servername = "192.168.0.21";
 $username = "root";
 $password = $_GET["password"];
-$dbname = "mysql";
+$dbname = "test";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
