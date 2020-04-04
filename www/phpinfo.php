@@ -6,7 +6,7 @@ $password = $_GET["password"];
 $dbname = "test";
 
 echo $_GET["password"];
-die;
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
