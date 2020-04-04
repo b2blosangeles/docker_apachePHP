@@ -30,7 +30,7 @@ RUN mkdir -p /var/log/supervisor
 RUN apt-get install -y openssh-server openssh-client passwd
 RUN mkdir -p /var/run/sshd
 
-#RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_dsa_key && ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key 
+RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_dsa_key && ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key 
 RUN sed -ri 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 RUN echo 'root:changeme' | chpasswd
 
