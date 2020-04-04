@@ -2,10 +2,10 @@
 <?php
 $servername = "192.168.0.21";
 // servername = "127.0.0.1";
-$username = "root@192.168.0.21";
-$password = $_GET["password"];
+$username = "root";
+$password = 'Trinet2020%23';
 $dbname = "test";
-
+// $_GET["password"]
 echo $_GET["password"];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
