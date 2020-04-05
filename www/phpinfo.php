@@ -1,6 +1,6 @@
 
 <?php
-$servername = "admin.shusiou.win";
+$servername = "142.93.73.66";
 $username = "root";
 $dbname = "mysql";
 // $_GET["password"]
