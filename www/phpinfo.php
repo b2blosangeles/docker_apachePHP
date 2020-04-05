@@ -12,7 +12,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+echo "errr";
 
 $sql = "SELECT * FROM `time_zone`;";
 $result = $conn->query($sql);
