@@ -1,14 +1,15 @@
 
 <?php
 // $servername = "142.93.73.66";
+echo "test 33";
+/*
 servername = "192.168.0.21";
 $username = "root";
 $password = 'Trinet2020#';
 $dbname = "test";
 // $_GET["password"]
 echo $_GET["password"];
-echo "test 33";
-/*
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
