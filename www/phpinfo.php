@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SHOW TABLES;";
+$sql = "SELECT * FROM `time_zone`;";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
