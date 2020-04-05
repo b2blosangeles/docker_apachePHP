@@ -4,10 +4,9 @@
 
 $servername = "192.168.0.21";
 $username = "root";
-$password = 'Trinet2020#';
-$dbname = "test";
+$dbname = "mysql";
 // $_GET["password"]
-echo $_GET["password"];
+$password = $_GET["password"];
 echo "test 323";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
