@@ -1,7 +1,7 @@
 
 <?php
-$servername = "142.93.73.66 ";
-// servername = "127.0.0.1";
+// $servername = "142.93.73.66";
+servername = "127.0.0.1";
 $username = "root";
 $password = 'Trinet2020#';
 $dbname = "test";
