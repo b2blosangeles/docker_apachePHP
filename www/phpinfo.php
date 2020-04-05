@@ -1,6 +1,6 @@
 
 <?php
-$servername = "142.93.73.66";
+$servername = "admin.shusiou.win";
 $username = "root";
 $dbname = "mysql";
 // $_GET["password"]
@@ -12,7 +12,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "errr";
+echo "admin.shusiou.win<hr/>";
 
 $sql = "SELECT * FROM `time_zone`;";
 $result = $conn->query($sql);
