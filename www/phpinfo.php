@@ -1,16 +1,14 @@
 
 <?php
-$servername = "192.168.0.21";
+$servername = "142.93.73.66";
 $username = "root";
 $dbname = "mysql";
 // $_GET["password"]
 $password = $_GET["password"];
-echo "test 323";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
-
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
